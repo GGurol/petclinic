@@ -25,7 +25,9 @@ class VisitForm(forms.ModelForm):
         if pet_id:
             self.fields['pet'].initial = pet_id
             self.fields['pet'].widget = forms.HiddenInput()
-            
+            self.fields['pet'].required = False
+
+ 
         # Set default date to today if creating a new visit
         if not self.instance.pk and not self.initial.get('date'):
             self.initial['date'] = date.today()

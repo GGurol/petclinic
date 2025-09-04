@@ -35,16 +35,6 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{% url 'vets:vet-list' %}">Veterinarians</a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="errorDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Error Pages
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="errorDropdown">
-                                        <li><a class="dropdown-item" href="/non-existent-page">404 Page Not Found</a></li>
-                                        <li><a class="dropdown-item" href="/admin/non-existent-page">403 Access Denied</a></li>
-                                        <li><a class="dropdown-item" href="{% url 'trigger-error' %}">500 Server Error</a></li>
-                                    </ul>
-                                </li>
                             </ul>
                         </div>
                     </nav>

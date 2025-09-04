@@ -1,3 +1,4 @@
+# pets/forms.py
 from django import forms
 from django.core.exceptions import ValidationError
 from datetime import date
@@ -22,13 +23,15 @@ class PetForm(forms.ModelForm):
         owner_id = kwargs.pop('owner_id', None)
         super(PetForm, self).__init__(*args, **kwargs)
         
+        self.fields['type'].queryset = PetType.objects.all().order_by('name')
+        
         # If owner_id is provided, pre-select the owner and make the field hidden
         if owner_id:
             self.fields['owner'].initial = owner_id
             self.fields['owner'].widget = forms.HiddenInput()
             
-        # Sort pet types by name
-        self.fields['type'].queryset = PetType.objects.all().order_by('name')
+            # Tell the form that this hidden field is not required for validation
+            self.fields['owner'].required = False
     
     def clean_birth_date(self):
         """Validate that birth date is not in the future"""

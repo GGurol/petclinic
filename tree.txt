@@ -1,0 +1,95 @@
+.
+├── db.sqlite3
+├── DjangoProject
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── views.py
+│   └── wsgi.py
+├── docker-compose.yml
+├── Dockerfile
+├── docs
+│   └── tasks.md
+├── manage.py
+├── owners
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── pets
+│   ├── admin.py
+│   ├── apps.py
+│   ├── fixtures
+│   │   └── pet_types.json
+│   ├── forms.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── requirements.txt
+├── static
+│   └── css
+│       └── style.css
+├── templates
+│   ├── base.html
+│   ├── errors
+│   │   ├── 403.html
+│   │   ├── 404.html
+│   │   └── 500.html
+│   ├── home.html
+│   ├── owners
+│   │   ├── owner_detail.html
+│   │   ├── owner_form.html
+│   │   ├── owner_list.html
+│   │   └── owner_search.html
+│   ├── pets
+│   │   ├── pet_detail.html
+│   │   └── pet_form.html
+│   ├── vets
+│   │   ├── vet_detail.html
+│   │   ├── vet_form.html
+│   │   └── vet_list.html
+│   └── visits
+│       ├── visit_detail.html
+│       └── visit_form.html
+├── tree.txt
+├── vets
+│   ├── admin.py
+│   ├── apps.py
+│   ├── fixtures
+│   │   └── specialties.json
+│   ├── forms.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+└── visits
+    ├── admin.py
+    ├── apps.py
+    ├── forms.py
+    ├── __init__.py
+    ├── migrations
+    │   ├── 0001_initial.py
+    │   └── __init__.py
+    ├── models.py
+    ├── tests.py
+    ├── urls.py
+    └── views.py
+
+21 directories, 72 files

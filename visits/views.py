@@ -32,6 +32,15 @@ class VisitCreateView(CreateView):
         if 'pet_id' in self.kwargs:
             context['pet'] = get_object_or_404(Pet, pk=self.kwargs['pet_id'])
         return context
+    
+    def form_valid(self, form):
+        """Set the pet on the visit instance before saving."""
+        # Get the Pet object from the URL's pet_id
+        pet = get_object_or_404(Pet, pk=self.kwargs['pet_id'])
+        # Assign this pet to the visit being created
+        form.instance.pet = pet
+        return super().form_valid(form)
+
 
     def get_success_url(self):
         """Redirect to pet detail page if visit was created from there"""
